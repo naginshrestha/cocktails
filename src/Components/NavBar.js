@@ -8,7 +8,7 @@ export const NavBar = () => {
   return (
     <Navbar className='bg-light p-3'>
       <Container>
-        <Navbar.Brand href="#home">cocktails</Navbar.Brand>
+        <Navbar.Brand href="#home">ThecocktailsDB</Navbar.Brand>
         <Navbar.Toggle />
         
         <Navbar.Collapse className='justify-content-end'>
@@ -18,9 +18,8 @@ export const NavBar = () => {
             <Link to="/about" className="nav-link">About</Link>
 
 
+
         </Nav>
-
-
         </Navbar.Collapse>
       </Container>
     </Navbar>
