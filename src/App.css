@@ -1,3 +1,87 @@
 .main{
-  min-height: 82vh;
+  min-height: 80vh;
+}
+
+.search-input{
+  min-width: 400px;
+}
+
+.progressbar{
+  min-height: 300px;
+}
+.cocktail-container{
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.frame{
+  height: 400px;
+  width: 350px;
+  border-radius: 20px;
+
+}
+.iamges{
+  height: 250px;
+  width: 350px;
+  border-radius: 20px;
+
+}
+.cocktails-button h5  {
+  margin-left: 20px;
+}
+.cocktails-button p  {
+  margin-left: 20px;
+}
+
+.cocktails-info{
+  height: 40px;
+ margin-right: 30px;
+  margin-top: -20px;
+  text-align: end;
+
+
+}
+.nav-back{
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  margin: auto;
+  border-radius: 20px;
+  background-color: rgb(4, 104, 71);
+}
+.nav-back a{
+  color: white;
+}
+.drinks{
+  width: 70vw;
+}
+.drinks-left{
+  width: 400px;
+}
+.drinks-img{
+  height: 520px;
+  width:400px;
+}
+.drinks-info{
+  height: 500px;
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+
+}
+
+.drinks-info span{
+ font-weight: bold;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .drinks-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }

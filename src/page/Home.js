@@ -8,12 +8,12 @@ export const Home = () => {
   return (
     <div >
 
-        <Layout>
+     
            <div> 
             <SearchForm/>
             <CocktailList/>
            </div>
-        </Layout>
+       
     </div>
   )
 }

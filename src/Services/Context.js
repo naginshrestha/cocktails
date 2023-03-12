@@ -8,8 +8,49 @@ const AppContext =React.createContext()
  const Context = ({children}) => {
   
     const[loading, setLoading] = useState(true)
-    const[searchTerm, setSearchTearm] = useState('a')
+    const[searchTerm, setSearchTearm] = useState('')
     const[cocktails, setCocktails]= useState([])
+
+    const dataFetch = useCallback( async() =>{
+      setLoading(true)
+      try {
+      
+
+        const response = await fetch(`${url}${searchTerm}`)
+        const {drinks} = await response.json();
+
+        if(drinks){
+
+          const newCocktails = drinks.map((item)=>{
+
+            const {idDrink,strDrink,strDrinkThumb,strAlcoholic,strGlass } = item;
+
+            return {id:idDrink,name:strDrink,image:strDrinkThumb,info:strAlcoholic,glass:strGlass}
+
+          })
+          setCocktails(newCocktails)
+          setLoading(false)
+
+        }
+        else{
+          setCocktails([])
+          setLoading(false)
+        }
+
+
+        
+      } catch (error) {
+        console.log(error);
+        setLoading(false)
+        
+      }
+    }, [searchTerm])
+
+  useEffect(()=>{
+    dataFetch();
+
+  }, [searchTerm])
+
 
 
   return (
@@ -24,5 +65,6 @@ const AppContext =React.createContext()
 // export const useGlobalContext =()=>{
 //   return useContext(AppContext)
 // }   
+
 export {AppContext , Context}
 

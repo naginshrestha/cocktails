@@ -7,8 +7,7 @@ import { AppContext } from '../Services/Context'
 export const CocktailList = () => {
 
     const {cocktails,loading} = useContext(AppContext);
-
-
+    console.log(cocktails);
 
     if(loading){
         return <Loading/>
@@ -16,15 +15,21 @@ export const CocktailList = () => {
 
     if(cocktails.length <1){
         return(
-            <div>
-                <h2>no cocktails matched your search</h2>
+            <div >
+                <h4 className='text-center mt-5'>No cocktails matched your search !!!</h4>
             </div>
         )
     }
 
-
   return (
-    <div>CocktailList</div>
+    <>
+    <h2 className='text-center mt-5'>Cocktails</h2>
+    <div className='d-flex flex-wrap justify-content-center align-items-center'>
+        {
+            cocktails.map((item,i)=> (<Cocktail key={i} {...item}/>))
+        }
+    </div>
+    </>
   )
 }
 

@@ -4,6 +4,7 @@ import { Home } from './page/Home';
 import { About } from './page/About';
 import { SingleCocktails } from './page/SingleCocktails';
 import { Error } from './page/Error';
+import { Layout } from './Components/Layout';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
+      <Layout>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/about' element={<About/>}></Route>
@@ -19,7 +21,7 @@ function App() {
 
 
         </Routes>
-
+        </Layout>
       </BrowserRouter>
 
     </div>
