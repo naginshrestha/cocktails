@@ -4,7 +4,6 @@ import { Layout } from '../Components/Layout'
 export const About = () => {
   return (
     <div>
-        <Layout>
        <section className="d-flex flex-column justify-content-center align-items-center">
       <h1 className="text-center">About us</h1>
       <p className='m-2 w-50 '>
@@ -15,7 +14,6 @@ export const About = () => {
         hic aspernatur error blanditiis?
       </p>
     </section>
-        </Layout>
     </div>
   )
 }
